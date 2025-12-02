@@ -7,7 +7,7 @@ import pygame as pg
 
 WIDTH = 1100  # ゲームウィンドウの幅
 HEIGHT = 650  # ゲームウィンドウの高さ
-NUM_OF_BOMBS = 2
+NUM_OF_BOMBS = 18
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -194,7 +194,7 @@ def main():
                 time.sleep(1)
                 return
         
-        for b, bomb in enumerate(bombs):
+        for b, bomb in enumerate(bombs): #ビーム、ボムの消去プログラム
             for be, beam in enumerate(beams):
                 if beam.rct.colliderect(bomb.rct):
                     bombs[b] = None
